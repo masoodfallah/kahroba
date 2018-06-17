@@ -232,86 +232,83 @@ $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/
     <?php endif; ?>
     <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 
-<!--    --><?php //$cssclass = ''; ?>
-<!---->
-<!--    --><?php //if ($this->countModules('right')) : ?>
-<!--        <!--right-->-->
-<!--        <div class="right col-sm-4 pull-right">-->
-<!--            <jdoc:include type="modules" name="right" style="xhtml"/>-->
-<!--        </div>-->
-<!---->
-<!--        --><?php //$cssclass = JFactory::getApplication()->getMenu()->getActive()->alias . ' col-lg-8 col-sm-8 '; ?>
-<!---->
-<!--    --><?php //endif; ?>
+    <!--    --><?php //$cssclass = ''; ?>
+    <!---->
+    <!--    --><?php //if ($this->countModules('right')) : ?>
+    <!--        <!--right-->
+    <!--        <div class="right col-sm-4 pull-right">-->
+    <!--            <jdoc:include type="modules" name="right" style="xhtml"/>-->
+    <!--        </div>-->
+    <!---->
+    <!--        --><?php //$cssclass = JFactory::getApplication()->getMenu()->getActive()->alias . ' col-lg-8 col-sm-8 '; ?>
+    <!---->
+    <!--    --><?php //endif; ?>
 
 
-<!--    <div class=" --><?php //echo $cssclass; ?><!--">-->
-<!--        <div class="content ">-->
-<!--            <div class="container">-->
-<!--                <div class="row">-->
-<!--                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">-->
-                        <jdoc:include type="component"/>
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+    <!--    <div class=" --><?php //echo $cssclass; ?><!--">-->
+    <!--        <div class="content ">-->
+    <!--            <div class="container">-->
+    <!--                <div class="row">-->
+    <!--                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">-->
+    <jdoc:include type="component"/>
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
 
 
     <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 
+</div>
 
-    <div class="footer">
-        <div class="container">
-            <div class="row" style="position: relative;">
+<div class="footer">
+    <div class="container">
+        <div class="row" style="position: relative;">
 
-                <!--aboutus-->
-                <?php if ($this->countModules('aboutus')) : ?>
-                    <div class="col-sm-4 pull-right">
-                        <div class="sppb-icon aboutus">
-                            <jdoc:include type="modules" name="aboutus" style="xhtml"/>
-                        </div>
+            <!--aboutus-->
+            <?php if ($this->countModules('aboutus')) : ?>
+                <div class="col-sm-4 pull-right">
+                    <div class="sppb-icon aboutus">
+                        <jdoc:include type="modules" name="aboutus" style="xhtml"/>
                     </div>
-                <?php endif; ?>
+                </div>
+            <?php endif; ?>
 
 
-                <!--latestNews-->
-                <?php if ($this->countModules('latestNews')) : ?>
-                    <div class="col-sm-4 pull-right">
-                        <div class="sppb-icon latestNews">
-                            <jdoc:include type="modules" name="latestNews" style="xhtml"/>
-                        </div>
+            <!--latestNews-->
+            <?php if ($this->countModules('latestNews')) : ?>
+                <div class="col-sm-4 pull-right">
+                    <div class="sppb-icon latestNews">
+                        <jdoc:include type="modules" name="latestNews" style="xhtml"/>
                     </div>
-                <?php endif; ?>
+                </div>
+            <?php endif; ?>
 
 
-                <!--contactus-->
-                <?php if ($this->countModules('contactus')) : ?>
-                    <div class="col-sm-4 pull-right">
-                        <div class="sppb-icon contactus">
-                            <jdoc:include type="modules" name="contactus" style="xhtml"/>
-                        </div>
+            <!--contactus-->
+            <?php if ($this->countModules('contactus')) : ?>
+                <div class="col-sm-4 pull-right">
+                    <div class="sppb-icon contactus">
+                        <jdoc:include type="modules" name="contactus" style="xhtml"/>
                     </div>
-                <?php endif; ?>
+                </div>
+            <?php endif; ?>
 
 
-            </div>
         </div>
     </div>
-
-
-    <?php if ($this->countModules('footer')) : ?>
-        <div class="footer-inner">
-            <div class="row">
-                <div class="col-lg-12 col-sm-12 col-md-12 col-xs-6">
-                    <jdoc:include type="modules" name="footer" style="xhtml"/>
-                </div>
-            </div>
-        </div>
-    <?php endif; ?>
-
-
 </div>
+
+
+<?php if ($this->countModules('footer')) : ?>
+    <div class="footer-inner">
+        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-6">
+            <jdoc:include type="modules" name="footer" style="xhtml"/>
+        </div>
+    </div>
+<?php endif; ?>
+
 
 </body>
 </html>
