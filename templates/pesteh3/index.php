@@ -232,35 +232,39 @@ $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/
     <?php endif; ?>
     <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 
-    <!--    --><?php //$cssclass = ''; ?>
-    <!---->
-    <!--    --><?php //if ($this->countModules('right')) : ?>
-    <!--        <!--right-->
-    <!--        <div class="right col-sm-4 pull-right">-->
-    <!--            <jdoc:include type="modules" name="right" style="xhtml"/>-->
-    <!--        </div>-->
-    <!---->
-    <!--        --><?php //$cssclass = JFactory::getApplication()->getMenu()->getActive()->alias . ' col-lg-8 col-sm-8 '; ?>
-    <!---->
-    <!--    --><?php //endif; ?>
+    <?php
+//    JFactory::getApplication()->getMenu()->getActive()->alias .
+        $cssclass = ''; ?>
+
+    <?php if ($this->countModules('right')) : ?>
+        <!--right-->
+        <div class="right col-sm-3 pull-right">
+            <jdoc:include type="modules" name="right" style="xhtml"/>
+        </div>
+
+        <?php $cssclass = ' col-sm-9 '; ?>
+
+    <?php endif; ?>
 
 
-    <!--    <div class=" --><?php //echo $cssclass; ?><!--">-->
-    <!--        <div class="content ">-->
-    <!--            <div class="container">-->
-    <!--                <div class="row">-->
-    <!--                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">-->
-    <jdoc:include type="component"/>
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
+    <div class=" <?php echo $cssclass; ?>">
+<!--        <div class="content ">-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">-->
+                        <jdoc:include type="component"/>
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
 
 
     <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 
 </div>
+
+<div class="clearfix"></div>
 
 <div class="footer">
     <div class="container">
