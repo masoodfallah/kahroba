@@ -40,8 +40,8 @@
 		<position>feature2</position>
 		<position>feature3</position>
 		<position>feature4</position>
+		<position>right</position>
 
-		<!--<position>social</position>-->
 		<position>footer</position>
 	</positions>
 	<languages folder="language">
