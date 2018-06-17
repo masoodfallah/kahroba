@@ -1,0 +1,22 @@
+Options +FollowSymLinks
+Options +Indexes
+
+#
+#  mod_rewrite in use
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/index.php
+RewriteCond %{REQUEST_URI} (/|\.php|\.html|\.htm|\.feed|\.pdf|\.raw|/[^.]*)$  [NC]
+RewriteRule (.*) index.php
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
+
+
+RewriteCond %{HTTP_HOST} ^sample.e-data.ir$ [OR]
+RewriteRule (.*) http://www.sample.e-data.ir$1 [R=301]
+
+
+
+DirectoryIndex index.php index.html 

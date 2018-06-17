@@ -1,0 +1,66 @@
+.banner-item{
+	color:#fff;
+	border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+.banner-item:nth-child(4) {
+	border-right:0;
+}
+.banner p{
+	line-height:40px;
+}
+.banner-item p:nth-child(1) {
+    font-size: 33px;
+    font-weight: normal;
+    font-family: sans-serif;
+	text-align: center;
+}
+.banner-item p:nth-child(2) {
+	font-size: 23px;
+    font-weight: normal;
+    font-family: 'irsans';
+	text-align: center;
+}
+.banner-item p:nth-child(3) {
+	font-size: 13px;
+    font-weight: normal;
+    font-family: 'irsans';
+	text-align: center;
+}
+@media screen and (max-width: 736px) {
+	.banner-item:nth-child(n){
+		border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+	}
+	.banner-item:nth-child(4){
+		border-bottom-width: 0;
+	}
+}
+@media screen and (max-width: 980px){
+	.banner-item:nth-child(1), .banner-item:nth-child(2) {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+	}
+	.banner-item:nth-child(2) {
+		border-right-width: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

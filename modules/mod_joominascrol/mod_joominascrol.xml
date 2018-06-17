@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_joominascrol</name>
+	<author>joomina team</author>
+	<creationDate>Jan 2017</creationDate>
+	<copyright>Copyright (C) 2017 - 2020 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@joomina.ir</authorEmail>
+	<authorUrl>www.joomina.ir</authorUrl>
+	<version>1.0.0</version>
+	<description>ماژول اسکرول مشتریان جومینا</description>
+	<files>
+		<filename module="mod_joominascrol">mod_joominascrol.php</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+		<folder>language</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			<field name="jquery" type="list" default="" label="بارگزاری جی کوری">
+			<option value="0">بله</option>
+			<option value="1">خیر</option>
+			</field>
+			
+			<field name="autoPlay" type="list" default="" label="پخش خودکار">
+			<option value="true">بله</option>
+			<option value="false">خیر</option>
+			</field>
+			<field name="col" type="list" default="" label="تعداد ستون ها">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			</field>
+
+			<field name="colt" type="list" default="" label="تعداد ستون ها در تبلت">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			</field>
+
+
+			<field name="colm" type="list" default="" label="تعداد ستون ها در موبایل">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			</field>
+			
+			<field name="autoPlay" type="list" default="" label="چرخش خودکار">
+			<option value="true">بله</option>
+			<option value="false">خیر</option>
+			</field>
+			
+			
+			<field name="responsive" type="list" default="" label="نمیش واکنشگرا">
+			<option value="true">بله</option>
+			<option value="false">خیر</option>
+			</field>
+			
+			</fieldset>
+			
+			<fieldset name="images">
+			
+<field name="img1" type="media" directory="customers" label="انتخاب تصویر 1" />
+<field name="img2" type="media" directory="customers" label="انتخاب تصویر 2" />
+<field name="img3" type="media" directory="customers" label="انتخاب تصویر 3" />
+<field name="img4" type="media" directory="customers" label="انتخاب تصویر 4" />
+<field name="img5" type="media" directory="customers" label="انتخاب تصویر 5" />
+<field name="img6" type="media" directory="customers" label="انتخاب تصویر 6" />
+<field name="img7" type="media" directory="customers" label="انتخاب تصویر 7" />
+<field name="img8" type="media" directory="customers" label="انتخاب تصویر 8" />
+<field name="img9" type="media" directory="customers"  label="انتخاب تصویر 9"/>
+<field name="img10" type="media" directory="customers" label="انتخاب تصویر 10" />
+<field name="img11" type="media" directory="customers" label="انتخاب تصویر 11" />
+<field name="img12" type="media" directory="customers" label="انتخاب تصویر 12" />
+<field name="img13" type="media" directory="customers" label="انتخاب تصویر 13" />
+<field name="img14" type="media" directory="customers" label="انتخاب تصویر 14" />
+<field name="img15" type="media" directory="customers" label="انتخاب تصویر 15" />
+
+			
+			
+			</fieldset>
+
+
+
+
+		</fields>
+	</config>
+
+</extension>
