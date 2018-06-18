@@ -51,7 +51,14 @@ $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/
     <script src="<?php echo JUri::root(true); ?>/media/jui/js/html5.js"></script><![endif]-->
 </head>
 <body>
-<div class="main-wrapper">
+
+<?php
+$mainClass = '';
+if (JFactory::getApplication()->getMenu()->getActive()->alias == 'blog'):
+    $mainClass = 'blogPage';
+endif; ?>
+
+<div class="main-wrapper  <?php echo $mainClass ?>  ">
 
 
     <!-- Header -->
@@ -233,36 +240,52 @@ $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/
     <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 
     <?php
-        if (JFactory::getApplication()->getMenu()->getActive()->alias == 'blog'): ?>
-            <div class=" blogHead ">
-                <div class="blogCover"></div>
-            </div>
-        <?php endif; ?>
-
-
-
-
-    <?php if ($this->countModules('right')) : ?>
-        <!--right-->
-        <div class="right col-sm-3 pull-right">
-            <jdoc:include type="modules" name="right" style="xhtml"/>
+    $cssclass = '';
+    if (JFactory::getApplication()->getMenu()->getActive()->alias == 'blog'): ?>
+        <div class=" blogHead ">
+            <div class="blogCover"></div>
         </div>
-
-        <?php $cssclass = ' col-sm-9 '; ?>
-
     <?php endif; ?>
 
 
-    <div class=" <?php echo $cssclass; ?>">
-<!--        <div class="content ">-->
-<!--            <div class="container">-->
-<!--                <div class="row">-->
-<!--                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">-->
-                        <jdoc:include type="component"/>
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+    <?php
+        $menu = JFactory::getApplication()->getMenu();
+        $lang = JFactory::getLanguage();
+        if ($menu->getActive() != $menu->getDefault($lang->getTag())) :?>
+
+            <div class="breadCrump">
+                <div class="container">
+                    <jdoc:include type="modules" name="breadCrump" style="none"/>
+                </div>
+            </div>
+
+        <?php endif; ?>
+
+
+    <div class="container">
+
+        <?php if ($this->countModules('right')) : ?>
+            <!--right-->
+            <div class="right col-md-3 col-sm-4 pull-right">
+                <jdoc:include type="modules" name="right" style="xhtml"/>
+            </div>
+
+            <?php $cssclass = ' col-md-9 col-sm-8 content '; ?>
+
+        <?php endif; ?>
+
+
+        <div class=" <?php echo $cssclass; ?>">
+            <!--        <div class="content ">-->
+            <!--            <div class="container">-->
+            <!--                <div class="row">-->
+            <!--                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">-->
+            <jdoc:include type="component"/>
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--        </div>-->
+        </div>
     </div>
 
 
@@ -270,7 +293,7 @@ $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/
 
 </div>
 
-<div class="clearfix"></div>
+<div class="clearfix "></div>
 
 <div class="footer">
     <div class="container">

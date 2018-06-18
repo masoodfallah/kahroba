@@ -56,9 +56,9 @@ JHtml::_('bootstrap.tooltip');
 				<?php endif; ?>
 
 				<?php if (($key != $penult_item_key) || $show_last) : ?>
-					<span class="divider">
-						<?php echo $separator; ?>
-					</span>
+<!--					<span class="divider">-->
+<!--						--><?php //echo $separator; ?>
+<!--					</span>-->
 				<?php endif; ?>
 				<meta itemprop="position" content="<?php echo $key + 1; ?>">
 			</li>
