@@ -54,7 +54,8 @@ $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/
 
 <?php
 $mainClass = '';
-if (JFactory::getApplication()->getMenu()->getActive()->alias == 'blog'):
+if ( JFactory::getApplication()->getMenu()->getActive() != '' &&
+JFactory::getApplication()->getMenu()->getActive()->alias == 'blog'):
     $mainClass = 'blogPage';
 endif; ?>
 
@@ -241,7 +242,9 @@ endif; ?>
 
     <?php
     $cssclass = '';
-    if (JFactory::getApplication()->getMenu()->getActive()->alias == 'blog'): ?>
+
+    if ( JFactory::getApplication()->getMenu()->getActive() != '' &&
+            JFactory::getApplication()->getMenu()->getActive()->alias == 'blog'): ?>
         <div class=" blogHead ">
             <div class="blogCover"></div>
         </div>
