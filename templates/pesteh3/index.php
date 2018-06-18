@@ -233,8 +233,14 @@ $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/
     <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 
     <?php
-//    JFactory::getApplication()->getMenu()->getActive()->alias .
-        $cssclass = ''; ?>
+        if (JFactory::getApplication()->getMenu()->getActive()->alias == 'blog'): ?>
+            <div class=" blogHead ">
+                <div class="blogCover"></div>
+            </div>
+        <?php endif; ?>
+
+
+
 
     <?php if ($this->countModules('right')) : ?>
         <!--right-->
