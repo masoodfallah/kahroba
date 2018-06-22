@@ -9,21 +9,16 @@
     font-family: IRANSans;
     font-style: normal;
     font-weight: normal;
-    /*src: url('Fonts/iranian_sans-webfont.eot');*/
-    /*src: url('Fonts/iranian_sans-webfont.eot?#iefix') format('embedded-opentype'), !* IE6-8 *! url('Fonts/iranian_sans-webfont.woff2') format('woff2'), !* FF39+,Chrome36+, Opera24+*! url('Fonts/IRANSansWeb.woff') format('woff'), !* FF3.6+, IE9, Chrome6+, Saf5.1+*! url('Fonts/iranian_sans-webfont.ttf') format('truetype');*/
-    /*src:url('Fonts/IRAN-Sans.ttf') format('truetype');*/
-    /*src:url('Fonts/IRAN Sans.ttf') format('truetype');*/
-    /*src:url('Fonts/IRAN Sans Expanded.ttf') format('truetype');*/
     src: url('Fonts/IRANSansWeb_UltraLight.woff2') format('woff2');
 }
 
-@font-face {
-    font-family: 'FontAwesome';
-    src: url('Fonts/fontawesome-webfont.eot?v=4.7.0');
-    src: url('Fonts/fonFtawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('Fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('Fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('Fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('Fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+/*@font-face {*/
+    /*font-family: 'FontAwesome';*/
+    /*src: url('Fonts/fontawesome-webfont.eot?v=4.7.0');*/
+    /*src: url('Fonts/fonFtawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('Fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('Fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('Fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('Fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');*/
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
+/*}*/
 
 @media screen and (max-width: 736px) {
     .portrait .image {
@@ -309,7 +304,7 @@ a {
 }
 
 .item .moduletable h3, .footer .aboutus .moduletable h3,
-.footer .latestNews .moduletable h3, .footer .contactus .moduletable h3, .ourcustomer .moduletable h3 {
+.footer .latestNews .moduletable h3, .footer .contactus .moduletable h3, .ourcustomer .moduletable h3, .right .moduletable h3 {
     color: #1a1a1a;
     padding-right: 0;
     padding-left: 3%;
@@ -319,7 +314,7 @@ a {
 
 .item .moduletable h3:after, .footer .aboutus .moduletable h3:after,
 .footer .latestNews .moduletable h3:after, .footer .contactus .moduletable h3:after,
-.ourcustomer .moduletable h3:after {
+.ourcustomer .moduletable h3:after ,.right .moduletable h3:after {
     clear: both;
     display: block;
     float: right;
@@ -773,13 +768,13 @@ a {
 /*=========================Content & Blog=========================*/
 
 .blog > .items-leading, .blog > .items-row > .span6 {
-    width: 49%;
-    height: 480px;
+    width: 100%;
+    /*height: 480px;*/
     margin: 0 auto;
     float: right;
     background-color: #FFF;
     overflow: hidden;
-    /*  */
+
     border: 1px solid rgba(144, 144, 144, 0.25);
     padding: 15px;
     padding-top: 0;
@@ -787,9 +782,24 @@ a {
     border-radius: 4px;
 }
 
-.blog > .items-leading, .blog > .items-row > .span6:nth-child(2n-1) {
-    margin-left: 2%;
+.blog > .items-row > .span6 .item{
+    padding-top: 0;
 }
+
+.blog .item-image, .blog p {
+    display: inline-block !important;
+}
+.blog .tags li{
+    list-style: none;
+    float: right;
+}
+.blog .tags {
+    margin: 0;
+}
+
+
+
+
 
 .items-more {
     visibility: hidden;
@@ -801,15 +811,17 @@ a {
 }
 
 .blog .page-header {
-    border-bottom: 0 !important;
+    /*border-bottom: 2px solid #f3f3f3;*/
+    border: 0 !important;
     margin: 0 !important;
+    text-align: right;
 }
 
 
 .blog img {
-    width: 530px;
-    min-height: 200px;
-    max-height: 200px;
+    width: 100%;
+    min-height: 250px;
+    max-height: 250px;
     border-radius: 4px;
     display: inline-block;
     margin: 0 0 2em 0;
@@ -823,7 +835,7 @@ a {
 }
 
 .content .items-leading h2 a, .content .items-row .span6 h2 a {
-    color: #6eb792 !important;
+    color: #fb3e3e !important;
     font-weight: normal !important;
     font-size: 20px !important;
 }
@@ -832,19 +844,34 @@ a {
     color: #5a5a5a !important;
     font-weight: normal;
     line-height: 25px;
+    width: 90%;
+    text-align: right;
 }
 
 .blog .readmore .btn {
     background-color: transparent;
-    color: #333333 !important;
-    border-color: #333333;
+    color: #ffffff !important;
+    border-color: #ff7b69;
     width: 200px;
     float: right;
+    border-radius: 1px;
+
+    background: linear-gradient(to right, #ff8170 50%, #ff624e 20%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition: all 0.4s ease;
 }
 
 .blog .readmore .btn:hover {
-    background-color: rgba(144, 144, 144, 0.2);
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    background-position:right bottom;
+    /*background-color: rgba(144, 144, 144, 0.2);*/
+
+    /*transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;*/
+}
+
+.readmore{
+    float: right;
+    margin-right: 35px;
 }
 
 .btn:active, .btn.active {
@@ -875,7 +902,28 @@ a {
 }
 .blog  {
     float: right !important;
-    /*overflow: hidden;*/
+}
+
+.blog .article-info .create, .blog .article-info .hits{
+    display: inline-block;
+}
+
+.blog .article-info{
+    text-align: right;
+}
+
+.blog .article-info .create:before {
+    content: "\f073";
+    font-family: 'FontAwesome';
+    float: right;
+    margin-left: 10px;
+}
+
+.blog .article-info .hits:before {
+    content: "\f06e";
+    font-family: 'FontAwesome';
+    float: right;
+    margin-left: 10px;
 }
 
 .blogHead{
@@ -937,5 +985,49 @@ a {
 .breadCrump .breadcrumb > li, .breadCrump .breadcrumb > li a{
     color: #f1f1f1  !important;
 }
+.right .moduletable{
+    /*padding: 0;*/
+}
+.right .moduletable h3{
+    /*background: #ffede9;*/
+    margin: 0;
+}
 
+.right .moduletable ul{
+    padding-top: 20px;
+    padding-right: 15px;
+}
+.right .moduletable li{
+    color: red;
+    line-height: 35px;
+    list-style: none;
+    border-bottom: 1px solid #f5f5f5;
+    background: linear-gradient(to right, white 50%, #fafafa 20%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition: all 0.4s ease;
+}
+.right .moduletable li:hover{
+    /*color: red;*/
+    background-position:right bottom;
+}
 
+.right .moduletable li a{
+    color: #999;
+}
+.right{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+.right .moduletable li:before {
+    content: "\e611"; /* this is your text. You can also use UTF-8 character codes as I do here */
+    font-family: Pe-icon-7-stroke;
+    font-size: 10px;
+    left: -5px;
+    /*position:absolute;*/
+    /*top:0;*/
+    border: 1px solid red;
+    padding: 2px;
+    border-radius: 3px;
+    margin-left: 10px;
+}
