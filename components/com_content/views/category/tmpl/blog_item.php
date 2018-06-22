@@ -20,6 +20,10 @@ $info    = $params->get('info_block_position', 0);
 	<div class="system-unpublished">
 <?php endif; ?>
 
+
+<?php echo JLayoutHelper::render('joomla.content.intro_image', $this->item); ?>
+
+
 <?php echo JLayoutHelper::render('joomla.content.blog_style_default_item_title', $this->item); ?>
 
 <?php if ($canEdit || $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
@@ -38,7 +42,7 @@ $info    = $params->get('info_block_position', 0);
 	<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'above')); ?>
 <?php endif; ?>
 
-<?php echo JLayoutHelper::render('joomla.content.intro_image', $this->item); ?>
+
 
 
 <?php if (!$params->get('show_intro')) : ?>
