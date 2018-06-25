@@ -769,7 +769,7 @@ a {
 
 .blog > .items-leading, .blog > .items-row > .span6 {
     width: 100%;
-    /*height: 480px;*/
+    /*!*height: 480px;*!15px*/
     margin: 0 auto;
     float: right;
     background-color: #FFF;
@@ -777,7 +777,7 @@ a {
 
     border: 1px solid rgba(144, 144, 144, 0.25);
     padding: 15px;
-    padding-top: 0;
+    /*padding-top: 15px;*/
     margin-bottom: 20px;
     border-radius: 4px;
 }
@@ -797,8 +797,51 @@ a {
     margin: 0;
 }
 
+.pagination {
+    margin-top: 0!important;
+    border: 1px solid #CCC;
+    background: #FFF;
+    color: #0f00ff;
+}
+.pagination .counter{
+    padding: 10px 17px;
+}
+.pagination p{
+    margin: 0 !important;
+}
+.pagination-list{
+    list-style: none;
+    float: right;
+    margin: 0 !important;
+    padding-right: 10px;
+}
+.pagination-list li{
+    float: right;
+    border-right: 1px solid #CCC;
+    padding: 10px 17px;
+}
+.pagination-list li a{
+    padding: 10px 17px;
+    color: #0f00ff;
+}
 
+.icon-previous:before{
+    content: "\f051";
+    font-family: 'FontAwesome';
+}
+.icon-first:before{
+    content: "\f050";
+    font-family: 'FontAwesome';
+}
 
+.icon-next:before{
+    content: "\f048";
+    font-family: 'FontAwesome';
+}
+.icon-last:before{
+    content: "\f049";
+    font-family: 'FontAwesome';
+}
 
 
 .items-more {
@@ -827,11 +870,6 @@ a {
     margin: 0 0 2em 0;
     position: relative;
     overflow: hidden;
-    -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
-    border: #6eb792 solid 1px;
-    background: #6eb792;
 }
 
 .content .items-leading h2 a, .content .items-row .span6 h2 a {
@@ -880,7 +918,7 @@ a {
 }
 
 .content .item-page .page-header h2 {
-    color: #6eb792 !important;
+    color: #f47363 !important;
     font-weight: normal !important;
     font-size: 20px !important;
 }
@@ -906,32 +944,30 @@ a {
     margin: 0 0 2em 0;
     position: relative;
     overflow: hidden;
-    -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
-    border: #6eb792 solid 1px;
-    background: #6eb792;
+    border: #FFF solid 1px;
+
 }
 .blog  {
     float: right !important;
 }
 
-.blog .article-info .create, .blog .article-info .hits{
+.blog .article-info .create, .blog .article-info .hits,
+.item-page .article-info .create, .item-page .article-info .hits{
     display: inline-block;
 }
 
-.blog .article-info{
+.blog .article-info, .item-page .article-info{
     text-align: right;
 }
 
-.blog .article-info .create:before {
+.blog .article-info .create:before , .item-page .article-info .create:before{
     content: "\f073";
     font-family: 'FontAwesome';
     float: right;
     margin-left: 10px;
 }
 
-.blog .article-info .hits:before {
+.blog .article-info .hits:before , .item-page .article-info .hits:before{
     content: "\f06e";
     font-family: 'FontAwesome';
     float: right;

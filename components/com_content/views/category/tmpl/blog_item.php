@@ -23,6 +23,8 @@ $info    = $params->get('info_block_position', 0);
 
 <?php echo JLayoutHelper::render('joomla.content.intro_image', $this->item); ?>
 
+<div class="clearfix"></div>
+
 
 <?php echo JLayoutHelper::render('joomla.content.blog_style_default_item_title', $this->item); ?>
 

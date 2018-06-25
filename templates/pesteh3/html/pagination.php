@@ -197,25 +197,25 @@ function pagination_item_inactive(&$item)
 	// Check for "Start" item
 	if ($item->text == JText::_('JLIB_HTML_START'))
 	{
-		return '<li class="disabled"><a><span class="icon-first"></span></a></li>';
+		return '<li class="disabled hide"><a><span class="icon-first"></span></a></li>';
 	}
 
 	// Check for "Prev" item
 	if ($item->text == JText::_('JPREV'))
 	{
-		return '<li class="disabled"><a><span class="icon-previous"></span></a></li>';
+		return '<li class="disabled hide"><a><span class="icon-previous"></span></a></li>';
 	}
 
 	// Check for "Next" item
 	if ($item->text == JText::_('JNEXT'))
 	{
-		return '<li class="disabled"><a><span class="icon-next"></span></a></li>';
+		return '<li class="disabled hide"><a><span class="icon-next"></span></a></li>';
 	}
 
 	// Check for "End" item
 	if ($item->text == JText::_('JLIB_HTML_END'))
 	{
-		return '<li class="disabled"><a><span class="icon-last"></span></a></li>';
+		return '<li class="disabled hide"><a><span class="icon-last"></span></a></li>';
 	}
 
 	// Check if the item is the active page
