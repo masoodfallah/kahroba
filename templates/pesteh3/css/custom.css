@@ -780,10 +780,12 @@ a {
     /*padding-top: 15px;*/
     margin-bottom: 20px;
     border-radius: 4px;
+    padding-bottom: 0;
 }
 
 .blog > .items-row > .span6 .item{
     padding-top: 0;
+    padding-bottom: 0;
 }
 
 .blog .item-image, .blog p {
@@ -818,7 +820,7 @@ a {
 .pagination-list li{
     float: right;
     border-right: 1px solid #CCC;
-    padding: 10px 17px;
+    padding: 10px 0;
 }
 .pagination-list li a{
     padding: 10px 17px;
@@ -858,6 +860,9 @@ a {
     border: 0 !important;
     margin: 0 !important;
     text-align: right;
+}
+.item-page .page-header{
+    border-bottom: 0 !important;
 }
 
 
@@ -922,6 +927,9 @@ a {
     font-weight: normal !important;
     font-size: 20px !important;
 }
+.content .item-page .page-header{
+    margin: 0 !important;
+}
 
 
 .item-page{
@@ -955,9 +963,20 @@ a {
 .item-page .article-info .create, .item-page .article-info .hits{
     display: inline-block;
 }
+.blog .items-more{
+    visibility: hidden;
+}
+
+.item-page .article-info {
+    padding-top: 10px;
+}
 
 .blog .article-info, .item-page .article-info{
     text-align: right;
+    border-top: 1px solid #f1f1f1;
+    padding-bottom: 0;
+    margin: 0;
+    margin-top: 15px;
 }
 
 .blog .article-info .create:before , .item-page .article-info .create:before{

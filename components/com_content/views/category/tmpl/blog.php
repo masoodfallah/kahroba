@@ -94,12 +94,12 @@ JHtml::_('behavior.caption');
 			<?php endif; ?>
 		<?php endforeach; ?>
 	<?php endif; ?>
-
-	<?php if (!empty($this->link_items)) : ?>
-		<div class="items-more">
-			<?php echo $this->loadTemplate('links'); ?>
-		</div>
-	<?php endif; ?>
+<!---->
+<!--	--><?php //if (!empty($this->link_items)) : ?>
+<!--		<div class="items-more">-->
+<!--			--><?php //echo $this->loadTemplate('links'); ?>
+<!--		</div>-->
+<!--	--><?php //endif; ?>
 
 	<?php if (!empty($this->children[$this->category->id]) && $this->maxLevel != 0) : ?>
 		<div class="cat-children">
