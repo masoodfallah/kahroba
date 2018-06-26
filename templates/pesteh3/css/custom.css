@@ -1010,6 +1010,27 @@ a {
     height: inherit;
 }
 
+.contactHead{
+    height: 250px;
+    background-image: url(../images/3.jpg);
+
+    min-height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+}
+.contactCover{
+    background: rgba(0, 0, 0, 0.6);
+    position: relative;
+    height: inherit;
+}
+
+
+
+
+
 .right .moduletable{
     margin: 20px 0;
     overflow: hidden;

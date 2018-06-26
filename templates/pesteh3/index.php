@@ -243,26 +243,34 @@ endif; ?>
     <?php
     $cssclass = '';
 
-    if ( JFactory::getApplication()->getMenu()->getActive() != '' &&
-            JFactory::getApplication()->getMenu()->getActive()->alias == 'blog'): ?>
-        <div class=" blogHead ">
-            <div class="blogCover"></div>
-        </div>
+    if ( JFactory::getApplication()->getMenu()->getActive() != ''):
+
+        if (JFactory::getApplication()->getMenu()->getActive()->alias == 'blog'): ?>
+            <div class=" blogHead ">
+                <div class="blogCover"></div>
+            </div>
+        <?php endif; ?>
+
+        <?php if (JFactory::getApplication()->getMenu()->getActive()->alias == 'contactus'): ?>
+            <div class=" contactHead ">
+                <div class="contactCover"></div>
+            </div>
+        <?php endif; ?>
     <?php endif; ?>
 
 
     <?php
-        $menu = JFactory::getApplication()->getMenu();
-        $lang = JFactory::getLanguage();
-        if ($menu->getActive() != $menu->getDefault($lang->getTag())) :?>
+    $menu = JFactory::getApplication()->getMenu();
+    $lang = JFactory::getLanguage();
+    if ($menu->getActive() != $menu->getDefault($lang->getTag())) :?>
 
-            <div class="breadCrump">
-                <div class="container">
-                    <jdoc:include type="modules" name="breadCrump" style="none"/>
-                </div>
+        <div class="breadCrump">
+            <div class="container">
+                <jdoc:include type="modules" name="breadCrump" style="none"/>
             </div>
+        </div>
 
-        <?php endif; ?>
+    <?php endif; ?>
 
 
     <div class="container">

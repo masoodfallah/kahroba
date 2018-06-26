@@ -51,9 +51,9 @@ class JConfig {
 	public $MetaVersion = '0';
 	public $robots = '';
 	public $sef = '1';
-	public $sef_rewrite = '0';
+	public $sef_rewrite = '1';
 	public $sef_suffix = '0';
-	public $unicodeslugs = '0';
+	public $unicodeslugs = '1';
 	public $feed_limit = '10';
 	public $feed_email = 'site';
 	public $log_path = 'E:\\Xampp\\htdocs\\sample\\administrator/logs';
