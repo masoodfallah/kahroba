@@ -1012,7 +1012,7 @@ a {
 
 .contactHead{
     height: 250px;
-    background-image: url(../images/3.jpg);
+    background-image: url(../images/contactusHead.jpg);
 
     min-height: 100%;
     background-size: cover;
@@ -1022,7 +1022,8 @@ a {
     -webkit-transform: translateZ(0);
 }
 .contactCover{
-    background: rgba(0, 0, 0, 0.6);
+    /*background: rgba(0, 0, 0, 0.6);*/
+    background: rgba(79, 79, 79, 0.6);
     position: relative;
     height: inherit;
 }
