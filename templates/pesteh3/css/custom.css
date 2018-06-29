@@ -304,7 +304,8 @@ a {
 }
 
 .item .moduletable h3, .footer .aboutus .moduletable h3,
-.footer .latestNews .moduletable h3, .footer .contactus .moduletable h3, .ourcustomer .moduletable h3, .right .moduletable h3 {
+.footer .latestNews .moduletable h3, .footer .contactus .moduletable h3,
+.ourcustomer .moduletable h3, .right .moduletable h3, .contactPage .moduletable h3 {
     color: #1a1a1a;
     padding-right: 0;
     padding-left: 3%;
@@ -314,7 +315,8 @@ a {
 
 .item .moduletable h3:after, .footer .aboutus .moduletable h3:after,
 .footer .latestNews .moduletable h3:after, .footer .contactus .moduletable h3:after,
-.ourcustomer .moduletable h3:after ,.right .moduletable h3:after {
+.ourcustomer .moduletable h3:after ,.right .moduletable h3:after ,
+.contactPage .moduletable h3:after{
     clear: both;
     display: block;
     float: right;
@@ -664,12 +666,16 @@ a {
 
 .footer .latestNews ul li {
     list-style: none;
-    padding-top: 15px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    /*padding-bottom: 10px;*/
 }
 
 .footer .latestNews ul li a {
     display: inline-flex;
+}
+
+.footer .latestNews span{
+    line-height: 55px;
 }
 
 .footer .latestNews ul li a span {
@@ -724,18 +730,18 @@ a {
 .footer .contactus form input[type*="tel"], .footer .contactus form textarea {
     border: 1px solid #404040 !important;
     background-color: rgba(255, 255, 255, 0.1);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #ffffff;
 }
 
 .footer .contactus form input[type*="text"], .footer .contactus form input[type*="email"],
 .footer .contactus form input[type*="tel"] {
-    height: 45px;
+    height: 35px;
 }
 
 .footer .contactus form input[type*="text"], .footer .contactus form input[type*="email"],
 .footer .contactus form input[type*="tel"] {
-    height: 47px;
+    height: 35px;
     border-color: #dddddd;
 }
 
@@ -1033,16 +1039,11 @@ a {
 
 
 .right .moduletable{
-    margin: 20px 0;
+    margin: 0 0;
     overflow: hidden;
     background: #FFF;
     border-radius: 5px;
     padding: 25px 10px;
-    box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-    -ms-box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-    -o-box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 /***********Search***********/
@@ -1074,11 +1075,11 @@ a {
 .breadCrump .breadcrumb > li, .breadCrump .breadcrumb > li a{
     color: #f1f1f1  !important;
 }
-.right .moduletable{
-    /*padding: 0;*/
+.right{
+    border: 1px solid rgba(144, 144, 144, 0.25);
+    border-radius: 4px;
 }
 .right .moduletable h3{
-    /*background: #ffede9;*/
     margin: 0;
 }
 
@@ -1109,14 +1110,29 @@ a {
     padding-left: 0 !important;
 }
 .right .moduletable li:before {
-    content: "\e611"; /* this is your text. You can also use UTF-8 character codes as I do here */
+    content: "\e611";
     font-family: Pe-icon-7-stroke;
     font-size: 10px;
     left: -5px;
-    /*position:absolute;*/
-    /*top:0;*/
     border: 1px solid red;
     padding: 2px;
     border-radius: 3px;
     margin-left: 10px;
+}
+
+.contactPage .moduletable a{
+    color: #03aee4;
+    webkit-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -ms-transition: all 0.2s ease-in-out 0s;
+    -o-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+}
+.contactPage .moduletable a:hover{
+    color: #333333;
+}
+
+.contactPage-map {
+    border: 1px solid red;
+    height: 500px;
 }

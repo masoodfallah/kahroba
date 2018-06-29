@@ -42,6 +42,8 @@
 		<position>feature4</position>
 		<position>right</position>
 		<position>breadCrump</position>
+		<position>contactPage</position>
+		<position>contactPage-map</position>
 
 		<position>footer</position>
 	</positions>

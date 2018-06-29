@@ -54,8 +54,8 @@ $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/
 
 <?php
 $mainClass = '';
-if ( JFactory::getApplication()->getMenu()->getActive() != '' &&
-JFactory::getApplication()->getMenu()->getActive()->alias == 'blog'):
+if (JFactory::getApplication()->getMenu()->getActive() != '' &&
+    JFactory::getApplication()->getMenu()->getActive()->alias == 'blog'):
     $mainClass = 'blogPage';
 endif; ?>
 
@@ -243,7 +243,7 @@ endif; ?>
     <?php
     $cssclass = '';
 
-    if ( JFactory::getApplication()->getMenu()->getActive() != ''):
+    if (JFactory::getApplication()->getMenu()->getActive() != ''):
 
         if (JFactory::getApplication()->getMenu()->getActive()->alias == 'blog'): ?>
             <div class=" blogHead ">
@@ -252,10 +252,12 @@ endif; ?>
         <?php endif; ?>
 
         <?php if (JFactory::getApplication()->getMenu()->getActive()->alias == 'contactus'): ?>
-            <div class=" contactHead ">
-                <div class="contactCover"></div>
-            </div>
-        <?php endif; ?>
+        <div class=" contactHead ">
+            <div class="contactCover"></div>
+        </div>
+
+
+    <?php endif; ?>
     <?php endif; ?>
 
 
@@ -300,6 +302,30 @@ endif; ?>
     </div>
 
 
+    <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <div class="container">
+        <!--contactus-->
+        <?php if ($this->countModules('contactPage')) : ?>
+
+            <div class="col-sm-6 pull-right">
+                <div class=" contactPage">
+                    <jdoc:include type="modules" name="contactPage" style="xhtml"/>
+                </div>
+            </div>
+        <?php endif; ?>
+
+
+        <!--contactus-->
+        <?php if ($this->countModules('contactPage-map')) : ?>
+            <div class="col-sm-6 pull-right">
+                <div class=" contactPage-map">
+                    <jdoc:include type="modules" name="contactPage-map" style="xhtml"/>
+                </div>
+            </div>
+        <?php endif; ?>
+
+    </div>
     <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 
 </div>
