@@ -53,10 +53,11 @@ $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/
 <body>
 
 <?php
-$mainClass = '';
-if (JFactory::getApplication()->getMenu()->getActive() != '' &&
-    JFactory::getApplication()->getMenu()->getActive()->alias == 'blog'):
-    $mainClass = 'blogPage';
+$mainClass = 'blogPage';
+
+if (JFactory::getApplication()->getMenu()->getActive() != '')
+    if (JFactory::getApplication()->getMenu()->getActive()->alias == 'home'):
+        $mainClass = '';
 endif; ?>
 
 <div class="main-wrapper  <?php echo $mainClass ?>  ">
@@ -289,15 +290,7 @@ endif; ?>
 
 
         <div class=" <?php echo $cssclass; ?>">
-            <!--        <div class="content ">-->
-            <!--            <div class="container">-->
-            <!--                <div class="row">-->
-            <!--                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">-->
             <jdoc:include type="component"/>
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
-            <!--        </div>-->
         </div>
     </div>
 
@@ -357,10 +350,10 @@ endif; ?>
 
 
             <!--contactus-->
-            <?php if ($this->countModules('contactus')) : ?>
+            <?php if ($this->countModules('popularTag')) : ?>
                 <div class="col-sm-4 pull-right">
-                    <div class="sppb-icon contactus">
-                        <jdoc:include type="modules" name="contactus" style="xhtml"/>
+                    <div class="sppb-icon popularTag">
+                        <jdoc:include type="modules" name="popularTag" style="xhtml"/>
                     </div>
                 </div>
             <?php endif; ?>

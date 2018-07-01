@@ -44,6 +44,7 @@
 		<position>breadCrump</position>
 		<position>contactPage</position>
 		<position>contactPage-map</position>
+		<position>popularTag</position>
 
 		<position>footer</position>
 	</positions>
