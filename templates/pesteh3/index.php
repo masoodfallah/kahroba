@@ -58,7 +58,7 @@ $mainClass = 'blogPage';
 if (JFactory::getApplication()->getMenu()->getActive() != '')
     if (JFactory::getApplication()->getMenu()->getActive()->alias == 'home'):
         $mainClass = '';
-endif; ?>
+    endif; ?>
 
 <div class="main-wrapper  <?php echo $mainClass ?>  ">
 
@@ -297,28 +297,24 @@ endif; ?>
 
     <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 
-    <div class="container">
-        <!--contactus-->
-        <?php if ($this->countModules('contactPage')) : ?>
+    <?php if ($this->countModules('contactPage') || $this->countModules('contactPage-map')) : ?>
+        <div class="container contactUsPage">
 
+            <!--contactPage-->
             <div class="col-sm-6 pull-right">
                 <div class=" contactPage">
                     <jdoc:include type="modules" name="contactPage" style="xhtml"/>
                 </div>
             </div>
-        <?php endif; ?>
 
-
-        <!--contactus-->
-        <?php if ($this->countModules('contactPage-map')) : ?>
+            <!--contactPage-map-->
             <div class="col-sm-6 pull-right">
                 <div class=" contactPage-map">
                     <jdoc:include type="modules" name="contactPage-map" style="xhtml"/>
                 </div>
             </div>
-        <?php endif; ?>
-
-    </div>
+        </div>
+    <?php endif; ?>
     <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 
 </div>
