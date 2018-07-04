@@ -989,9 +989,9 @@ a {
     margin-bottom: 30px;
 }
 .tag-category img {
-    width: 35%;
-    min-height: 250px;
-    max-height: 250px;
+    width: 33%;
+    min-height: 190px;
+    max-height: 190px;
     border-radius: 4px;
     display: inline-block;
     margin: 0 0 2em 0;
@@ -1004,7 +1004,7 @@ a {
     margin-bottom: 20px;
     border: 1px solid rgba(144, 144, 144, 0.25);
     border-radius: 4px;
-    padding: 15px;
+    padding: 10px;
 }
 .tag-category .category li span{
     width: 60%;
