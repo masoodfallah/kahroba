@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.1" method="upgrade">
+	<name>com_product</name>
+	<author>Joomla! Project</author>
+	<creationDate>April 2006</creationDate>
+	<copyright>(C) 2018 - 2025 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>masoodfallah68@gmail.com</authorEmail>
+	<authorUrl>www.shadowserver.ir</authorUrl>
+	<version>3.0.0</version>
+	<description>COM_PRODUCT_XML_DESCRIPTION</description>
+
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<files folder="site">
+		<filename>product.php</filename>
+		<filename>controller.php</filename>
+		<filename>metadata.xml</filename>
+		<filename>router.php</filename>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	<languages folder="site">
+		<language tag="fa-IR">language/fa-IR.com_product.ini</language>
+	</languages>
+
+	<administration>
+		<menu img="class:product">com_product</menu>
+		<submenu>
+			<!--
+				Note that all & must be escaped to &amp; for the file to be valid
+				XML and be parsed by the installer
+			-->
+			<menu link="option=com_product" img="class:product"
+				alt="Product/Products">com_product_products</menu>
+			<!--<menu link="option=com_categories&amp;extension=com_product"-->
+				<!--view="categories" img="class:product-cat" alt="Products/Categories">com_product_categories</menu>-->
+		</submenu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>product.php</filename>
+			<filename>controller.php</filename>
+			<folder>controllers</folder>
+			<folder>elements</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="fa-IR">language/fa-IR.com_product.ini</language>
+			<language tag="fa-IR">language/fa-IR.com_product.sys.ini</language>
+		</languages>
+	</administration>
+</extension>
+
