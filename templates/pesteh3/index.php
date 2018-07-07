@@ -297,6 +297,28 @@ if (JFactory::getApplication()->getMenu()->getActive() != '')
 
     <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 
+    <?php
+    if (JFactory::getApplication()->getMenu()->getActive()->alias == 'product'):
+
+        if ($this->countModules('product_item_right') || $this->countModules('product_item_left')) : ?>
+            <div class="container contactUsPage">
+                <div class="col-sm-6 pull-right">
+                    <div class="product_item_right">
+                        <jdoc:include type="modules" name="product_item_right" style="xhtml"/>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 pull-right">
+                    <div class="product_item_left">
+                        <jdoc:include type="modules" name="product_item_left" style="xhtml"/>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
+    <?php endif; ?>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+
     <?php if ($this->countModules('contactPage') || $this->countModules('contactPage-map')) : ?>
         <div class="container contactUsPage">
 

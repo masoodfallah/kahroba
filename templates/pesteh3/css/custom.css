@@ -258,7 +258,7 @@ a {
 .item .moduletable h3, .footer .aboutus .moduletable h3,
 .footer .latestNews .moduletable h3, .contactPage-map .moduletable h3,
 .ourcustomer .moduletable h3, .right .moduletable h3, .contactPage .moduletable h3,
-.popularTag .moduletable h3{
+.popularTag .moduletable h3, .product_item_right h3, .product_item_left h3{
     color: #1a1a1a;
     padding-right: 0;
     padding-left: 3%;
@@ -268,7 +268,8 @@ a {
 .item .moduletable h3:after, .footer .aboutus .moduletable h3:after,
 .footer .latestNews .moduletable h3:after, .contactPage-map .moduletable h3:after,
 .ourcustomer .moduletable h3:after ,.right .moduletable h3:after ,
-.contactPage .moduletable h3:after, .popularTag .moduletable h3:after{
+.contactPage .moduletable h3:after, .popularTag .moduletable h3:after,
+.product_item_right h3:after, .product_item_left h3:after{
     clear: both;
     display: block;
     float: right;
@@ -1012,4 +1013,14 @@ a {
     margin: 10px;
     padding: 10px;
     font-weight: bold;
+}
+.product_item_right .moduletable, .product_item_left .moduletable {
+    padding: 10px;
+}
+.product_item_right img, .product_item_left img{
+    width: 100%;
+}
+.product_item_right h3, .product_item_left h3{
+    margin-bottom: 40px;
+
 }
