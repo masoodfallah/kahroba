@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="module" client="site" method="upgrade">
+	<name>ماژول منو ساز</name> 
+    <version>2.0.2</version>
+    <creationDate>January, 2018</creationDate>
+    <author>joomina</author>
+    <authorEmail>shadowserver.iran@gmail.com</authorEmail>
+    <authorUrl>www.shadowserver.ir</authorUrl>
+    <copyright>shadowserver.ir</copyright>
+    <license>GNU/GPL</license>
+	<description>www.shadowserver.ir</description>
+	
+	<files>
+		<filename module="mod_gruemenu">mod_gruemenu.php</filename>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>php</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_gruemenu/php">						
+			<fieldset name="basic">
+			
+				<field name="menutype" type="menu" label="انتخاب منو" description="انتخاب منو برای نمایش." />
+				
+				<field name="jQuery" type="list" default="0" label="جی کوئری" description="فعال یا غیر فعال کردن آخرین ورژن جی کوئری تنها برای اطمینان از فعال بودن جی کوئری در وبسایتتان.">
+					<option value="0">غیرفعال</option>
+					<option	value="1">فعال</option>
+				</field>
+
+				<field name="touchWipe" type="list" default="1" label="افکت حاور" description="فعال یا غیر فعال کردن افکت حاور پلاگین جی کوئری.">
+					<option value="0">غیرفعال</option>
+					<option	value="1">فعال</option>
+				</field>
+				
+				<field name="Fixed" type="list" default="0" label="منو ثابت" description="اگر بله, منو ثابت خواهد شد زمانی که اسکرول پائین صفحه ثابت است.">
+					<option value="0">خیر</option>
+					<option	value="1">بله</option>
+				</field>
+
+				<field name="Mobile" type="list" default="1" label="منوی حالت موبایل" description="فعال یا غیر فعال منوی تلفن همراه در صفحه نمایش کوچکتر.">
+					<option value="0">غیرفعال</option>
+					<option	value="1">فعال</option>
+				</field>
+				
+				<field name="MenuDirection" type="list" default="0" label="چیدمان منو" description="اگر بر روی بله گذاشته شود , منو به هنگام اسکرول به پائین صفحه ثابت خواهد شد.">
+					<option value="0">بالا به پائین</option>
+					<option	value="1">پائین به بالا</option>
+					<option	value="2">چپ به راست</option>
+					<option	value="3">راست به چپ</option>
+				</field>
+				
+				<field name="startLevel" type="list" default="1" label="سطح شروع" description="سطح منوی شروع.">
+					<option value="1">J1</option>
+				</field>
+				<field name="endLevel" type="list" default="0" label="سطح پایانی" description="سطح منوی پایانی.">
+					<option value="0">JALL</option>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+				<field name="menuFontSize" type="text" default="13px" label="اندازه فونت منو" description="تنظیم اندازه فونت منو. (ie. 13px, 13em) " />
+				
+				<field name="menubg" type="jscolor" default="#33373c" label="پس زمینه منو" description="انتخاب رنگ پس زمینه برای منوی سطح اول." />
+				<field name="menulink" type="jscolor" default="#33373c" label="لینک منو" description="انتخاب رنگ لینک برای منوی سطح اول." />
+				
+				<field name="submenuFontSize" type="text" default="11px" label="اندازه فونت زیر منو" description="انتخاب اندازه فونت منو. (ie. 11px, 11em) " />
+				
+				<field name="submenubg" type="jscolor" default="#33373c" label="پس زمینه زیر منو" description="انتخاب رنگ پس زمینه برای زیر منو." />
+				<field name="submenulink" type="jscolor" default="#33373c" label="لینک زیر منو" description="انتخاب رنگ لینک  برای زیر منو." />
+				
+				<field name="menubghover" type="jscolor" default="#33373c" label="حاور/پس زمینه منو فعال" description="انتخاب رنگ پس زمینه برای حاور منوی فعال." />
+				<field name="menulinkhover" type="jscolor" default="#33373c" label="حاور/لینک منو فعال" description="انتخاب حاور برای لینک منوی فعال." />
+				
+				<field name="menuradius" type="list" default="3" label="گوشه های گرد" description="منوی سطح پایانی.">
+					<option value="0">0 px</option>
+					<option value="3">3 px</option>
+					<option value="6">6 px</option>
+					<option value="10">10 px</option>
+					<option value="12">12 px</option>
+					<option value="15">15 px</option>
+				</field>				
+
+				<field name="fontStyle" type="text" default="Open+Sans" label="سبک فونت گوگل" description="فقط برای عنوان آکوردئون." />
+				
+				<field name="screenMax" type="text" default="720" label="حداکثر عرض صفحه نمایش (px)" description="منو به همراه منو تغییر خواهد کرد زمانی که عرض پنجره مرورگر برابر یا کمتر از مقدار مشخص شده باشد." />
+									
+			<field type="asset" />
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field name="tag_id" type="text" label="IDبرچسب منو" description="ویژگی id به اختصاص به تگ ریشه UL از منوی (optional)" />
+				<field name="class_sfx" type="text" label="پسوند کلاس منو" description="A suffix to be applied to the CSS class of the menu items" />
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option	value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode"	type="hidden" default="itemid">
+					<option	value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

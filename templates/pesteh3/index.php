@@ -253,12 +253,17 @@ if (JFactory::getApplication()->getMenu()->getActive() != '')
         <?php endif; ?>
 
         <?php if (JFactory::getApplication()->getMenu()->getActive()->alias == 'contactus'): ?>
-        <div class=" contactHead ">
-            <div class="contactCover"></div>
-        </div>
+            <div class=" contactHead ">
+                <div class="contactCover"></div>
+            </div>
+        <?php endif; ?>
 
+        <?php if (JFactory::getApplication()->getMenu()->getActive()->alias == 'product'): ?>
+            <div class=" productHead ">
+                <div class="productCover"></div>
+            </div>
+        <?php endif; ?>
 
-    <?php endif; ?>
     <?php endif; ?>
 
 
@@ -301,7 +306,7 @@ if (JFactory::getApplication()->getMenu()->getActive() != '')
     if (JFactory::getApplication()->getMenu()->getActive()->alias == 'product'):
 
         if ($this->countModules('product_item_right') || $this->countModules('product_item_left')) : ?>
-            <div class="container contactUsPage">
+            <div class="container contactUsPage productPage">
                 <div class="col-sm-6 pull-right">
                     <div class="product_item_right">
                         <jdoc:include type="modules" name="product_item_right" style="xhtml"/>
